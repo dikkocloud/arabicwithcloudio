@@ -1,5 +1,5 @@
 // ---- CONFIG: update these two values whenever you're ready ----
-const WHATSAPP_NUMBER = "+2348085579021"; // digits only, country code, no + or spaces
+const WHATSAPP_NUMBER = "2348085579021"; // digits only, country code, no + or spaces
 const WHATSAPP_MESSAGE = "Hi! I'd like to book a free 15-minute Arabic assessment for my child.";
 const PAYSTACK_PUBLIC_KEY = "pk_test_00000000000000000000000000000000"; // replace with your real Paystack public key
 
@@ -12,7 +12,7 @@ const PLAN_AMOUNTS = {
 
 // WhatsApp link wiring
 document.getElementById("whatsapp-link").href =
-  `https://wa.me{${+2348085579021}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
