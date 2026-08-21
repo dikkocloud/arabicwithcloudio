@@ -30,10 +30,17 @@ body { background: #FFFFFF; color: #0A0A0A; }
   100% { transform: translateY(0) rotate(0deg); }
 }
 
+/* Visible by default — content must never depend on JS to display.
+   JS adds "pre-reveal" on page load (only if it successfully runs),
+   then swaps it for "visible" when the element scrolls into view. */
 .fade-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.pre-reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .fade-up.visible {
   opacity: 1;
