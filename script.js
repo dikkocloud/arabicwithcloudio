@@ -12,7 +12,7 @@ const PLAN_AMOUNTS = {
 
 // WhatsApp link wiring
 document.getElementById("whatsapp-link").href =
-  `https://wa.me/${+2348085579021}?text=${encodeURIComponent(Hello can we talk?)}`;
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
@@ -57,11 +57,16 @@ document.getElementById("paystack-button").addEventListener("click", () => {
   handler.openIframe();
 });
 
-// Scroll-reveal for fade-up elements
+// Scroll-reveal for fade-up elements.
+// Elements are visible by default in CSS — we only hide them here, right
+// before observing, so a JS failure never hides page content.
+const fadeEls = document.querySelectorAll(".fade-up:not(.visible)");
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        entry.target.classList.remove("pre-reveal");
         entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       }
@@ -69,4 +74,8 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.15 }
 );
-document.querySelectorAll(".fade-up:not(.visible)").forEach((el) => observer.observe(el));
+
+fadeEls.forEach((el) => {
+  el.classList.add("pre-reveal");
+  observer.observe(el);
+});
