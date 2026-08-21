@@ -136,7 +136,7 @@
     <div class="fade-up mb-14 text-center max-w-2xl mx-auto">
       <p class="text-xs font-semibold tracking-[0.25em] uppercase text-black/50 mb-4">Packages</p>
       <h2 class="font-display text-4xl md:text-5xl tracking-tight mb-4">Choose a pace that fits your child.</h2>
-      <p class="text-black/60">Every package is billed monthly. Prices below are placeholders — update them any time.</p>
+      <p class="text-black/60">Every package is billed monthly. Prices below are placeholders — update them any time. Each button below opens secure Paystack checkout for that plan.</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 items-start">
@@ -156,7 +156,7 @@
           <li class="flex gap-2"><span>✓</span> Ages 5–15</li>
           <li class="flex gap-2"><span>✓</span> Progress updates for parents</li>
         </ul>
-        <a href="#payment" data-plan="Beginner" class="pay-trigger inline-flex items-center justify-center rounded-full border border-black/20 font-semibold px-6 py-3 hover:border-black transition">
+        <a href="#" data-plan="Beginner" class="pay-trigger inline-flex items-center justify-center rounded-full border border-black/20 font-semibold px-6 py-3 hover:border-black transition">
           Choose Beginner
         </a>
       </div>
@@ -177,7 +177,7 @@
           <li class="flex gap-2"><span>✓</span> Intro to Qur'an &amp; Tajweed</li>
           <li class="flex gap-2"><span>✓</span> Monthly progress report</li>
         </ul>
-        <a href="#payment" data-plan="Standard" class="pay-trigger inline-flex items-center justify-center rounded-full bg-white text-ink font-semibold px-6 py-3 hover:bg-white/90 transition">
+        <a href="#" data-plan="Standard" class="pay-trigger inline-flex items-center justify-center rounded-full bg-white text-ink font-semibold px-6 py-3 hover:bg-white/90 transition">
           Choose Standard
         </a>
       </div>
@@ -197,7 +197,7 @@
           <li class="flex gap-2"><span>✓</span> In-depth Qur'an recitation &amp; Tajweed</li>
           <li class="flex gap-2"><span>✓</span> Priority scheduling &amp; parent check-ins</li>
         </ul>
-        <a href="#payment" data-plan="Premium" class="pay-trigger inline-flex items-center justify-center rounded-full border border-black/20 font-semibold px-6 py-3 hover:border-black transition">
+        <a href="#" data-plan="Premium" class="pay-trigger inline-flex items-center justify-center rounded-full border border-black/20 font-semibold px-6 py-3 hover:border-black transition">
           Choose Premium
         </a>
       </div>
@@ -214,7 +214,7 @@
     <p class="text-black/60 max-w-lg mx-auto mb-10 leading-relaxed">
       A quick, no-pressure session to see where your child is today and recommend the right package for them — before you spend a thing.
     </p>
-    <a href="#" id="wa.me/+2348085579021" target="_blank" rel="noopener noreferrer"
+    <a href="#" id="whatsapp-link"
        class="inline-flex items-center gap-3 rounded-full bg-ink text-white font-semibold px-8 py-4 hover:bg-black/80 transition">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
         <path d="M20.52 3.48A11.86 11.86 0 0 0 12.04 0C5.5 0 .17 5.33.17 11.87c0 2.09.55 4.13 1.6 5.93L0 24l6.36-1.67a11.84 11.84 0 0 0 5.67 1.44h.01c6.54 0 11.87-5.33 11.87-11.87 0-3.17-1.24-6.15-3.39-8.42Zm-8.48 18.2h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.77.99 1-3.67-.24-.38a9.86 9.86 0 0 1-1.52-5.27C2.12 6.45 6.6 1.97 12.05 1.97c2.63 0 5.1 1.03 6.96 2.89a9.79 9.79 0 0 1 2.88 6.98c0 5.45-4.48 9.93-9.85 9.93Zm5.4-7.44c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.09 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.12.57-.09 1.75-.72 2-1.41.24-.7.24-1.29.17-1.41-.07-.13-.27-.2-.57-.35Z"/>
@@ -225,34 +225,15 @@
   </div>
 </section>
 
-<!-- PAYMENT -->
-<section id="payment" class="py-24 px-6 bg-sand border-y border-black/10">
-  <div class="max-w-lg mx-auto text-center fade-up">
-    <p class="text-xs font-semibold tracking-[0.25em] uppercase text-black/50 mb-4">Ready to enroll?</p>
-    <h2 class="font-display text-4xl tracking-tight mb-5">Secure payment</h2>
-    <p class="text-black/60 mb-3 leading-relaxed">
-      Selected package: <span id="selected-plan" class="font-semibold text-ink">Standard</span>
-    </p>
-    <p class="text-black/50 text-sm mb-8">Payments are processed securely by Paystack.</p>
-    <button id="paystack-button" class="w-full inline-flex items-center justify-center rounded-full bg-ink text-white font-semibold px-8 py-4 hover:bg-black/80 transition">
-      Pay with Paystack
-    </button>
-    <p class="text-xs text-black/40 mt-4">You'll be taken to Paystack's secure checkout to complete payment.</p>
-  </div>
-</section>
-
 <!-- FOOTER -->
-<footer class="py-12 px-6">
+<footer class="py-12 px-6 border-t border-black/10">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-black/50">
     <span class="font-display text-lg text-ink">Arabic with Cloud</span>
     <span>© <span id="year"></span> Arabic with Cloud. All rights reserved.</span>
   </div>
 </footer>
 
-<!-- Paystack inline checkout script -->
-<script src="https://js.paystack.co/v1/inline.js"></script>
-
-<!-- Site logic -->
+<!-- Site logic (wires WhatsApp link + Paystack card links + animations) -->
 <script src="script.js"></script>
 
 </body>
