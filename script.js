@@ -1,5 +1,5 @@
 // ---- CONFIG: update these two values whenever you're ready ----
-const WHATSAPP_NUMBER = "10000000000"; // digits only, country code, no + or spaces
+const WHATSAPP_NUMBER = "+2348085579021"; // digits only, country code, no + or spaces
 const WHATSAPP_MESSAGE = "Hi! I'd like to book a free 15-minute Arabic assessment for my child.";
 const PAYSTACK_PUBLIC_KEY = "pk_test_00000000000000000000000000000000"; // replace with your real Paystack public key
 
