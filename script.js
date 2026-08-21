@@ -10,7 +10,7 @@ const WHATSAPP_MESSAGE = "Hi! I'd like to book a free 15-minute Arabic assessmen
 // dashboard (Payments → Payment Links), then paste each URL below.
 // Each pricing card button will open the matching link directly.
 const PAYSTACK_LINKS = {
-  Beginner: "   https://paystack.shop/pay/s2y4ifizw7",
+  Beginner: "https://paystack.shop/pay/s2y4ifizw7",
   Standard: " https://paystack.shop/pay/zfvv-1v1wd",
   Premium:  "https://paystack.shop/pay/4t0ngu03ij"
 };
