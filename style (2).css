@@ -1,0 +1,60 @@
+html { scroll-behavior: smooth; }
+body { background: #FFFFFF; color: #0A0A0A; }
+
+/* Signature element: flowing Arabic calligraphy line-art that draws itself in the hero */
+.calligraphy-stroke {
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  animation: draw 5s ease-in-out forwards, float 6s ease-in-out 5s infinite;
+}
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Drifting background letters — subtle, premium, not cartoonish */
+.drift-letter {
+  position: absolute;
+  font-family: 'Reem Kufi', serif;
+  color: rgba(10,10,10,0.045);
+  user-select: none;
+  pointer-events: none;
+  animation: drift 22s ease-in-out infinite;
+}
+@keyframes drift {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-24px) rotate(3deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-hover {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -12px rgba(10,10,10,0.18);
+  border-color: #0A0A0A;
+}
+
+.featured-card {
+  box-shadow: 0 30px 60px -15px rgba(10,10,10,0.25);
+}
+
+::selection { background: #0A0A0A; color: #FFFFFF; }
+
+@media (prefers-reduced-motion: reduce) {
+  .calligraphy-stroke, .drift-letter, .fade-up { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
+}
