@@ -12,7 +12,7 @@ const PLAN_AMOUNTS = {
 
 // WhatsApp link wiring
 document.getElementById("whatsapp-link").href =
-  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+  `https://wa.me/${+2348085579021}?text=${encodeURIComponent(Hello can we talk?)}`;
 
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
